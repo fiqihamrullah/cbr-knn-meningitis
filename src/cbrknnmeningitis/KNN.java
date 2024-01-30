@@ -12,7 +12,7 @@ import java.util.TreeMap;
 
 /**
  *
- * @author acer
+ * @author Fiqih Amrullah
  */
 public class KNN 
 {

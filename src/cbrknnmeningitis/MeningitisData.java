@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  *
- * @author acer
+ * @author Fiqih Amrullah
  */
 public class MeningitisData  implements Serializable,Comparable<MeningitisData> 
 {

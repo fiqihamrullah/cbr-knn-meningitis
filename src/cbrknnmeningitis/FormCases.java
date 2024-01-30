@@ -22,7 +22,7 @@ import utility.Util;
 
 /**
  *
- * @author TOSHIBA
+ * @author Fiqih Amrullah
  */
 public class FormCases extends javax.swing.JFrame 
 {

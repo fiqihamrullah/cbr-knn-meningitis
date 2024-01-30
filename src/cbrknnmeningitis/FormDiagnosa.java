@@ -14,7 +14,7 @@ import utility.Util;
 
 /**
  *
- * @author acer
+ * @author Fiqih Amrullah
  */
 public class FormDiagnosa extends javax.swing.JFrame 
 {

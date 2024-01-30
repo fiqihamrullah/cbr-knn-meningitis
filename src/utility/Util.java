@@ -7,23 +7,16 @@ package utility;
 import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Toolkit;
-import java.awt.Window;
-import javax.swing.JWindow;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.text.SimpleDateFormat;
+import java.awt.Window; 
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import java.util.*;
-import java.text.*;
+ 
 import javax.swing.UIManager.LookAndFeelInfo;
 /**
  *
- * @author TOSHIBA
+ * @author Fiqih Amrullah
  */
 public class Util {
   public static void TengahWindow(Window f){

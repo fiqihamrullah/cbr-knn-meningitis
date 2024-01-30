@@ -15,7 +15,7 @@ import utility.Util;
 
 /**
  *
- * @author acer
+ * @author Fiqih Amrullah
  */
 public class FormBobot extends javax.swing.JFrame 
 {

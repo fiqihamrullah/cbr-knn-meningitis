@@ -6,7 +6,7 @@ package cbrknnmeningitis;
 
 /**
  *
- * @author acer
+ * @author Fiqih Amrullah
  */
 public class Cbrknnmeningitis {
 

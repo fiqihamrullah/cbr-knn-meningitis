@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author TOSHIBA
+ * @author Fiqih Amrullah
  */
 public class CasesDBManager 
 {

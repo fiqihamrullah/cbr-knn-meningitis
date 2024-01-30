@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  *
- * @author acer
+ * @author Fiqih Amrullah
  */
 public class Meningitis
 {

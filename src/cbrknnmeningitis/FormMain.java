@@ -10,7 +10,7 @@ import utility.Util;
 
 /**
  *
- * @author acer
+ * @author Fiqih Amrullah
  */
 public class FormMain extends javax.swing.JFrame {
 
