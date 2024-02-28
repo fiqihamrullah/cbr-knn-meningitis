@@ -39,12 +39,12 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jbtnKelolaKB" min="-2" pref="63" max="-2" attributes="0"/>
+              <Component id="jbtnKelolaKB" min="-2" pref="57" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jbtnBobotKriteria" pref="63" max="32767" attributes="0"/>
+              <Component id="jbtnBobotKriteria" min="-2" pref="59" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jbtnDiagnosa" min="-2" pref="58" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace pref="55" max="32767" attributes="0"/>
               <Component id="jbtnExit" min="-2" pref="53" max="-2" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
@@ -54,7 +54,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="jbtnKelolaKB">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Kelola KB"/>
+        <Property name="text" type="java.lang.String" value="Manage KB"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnKelolaKBActionPerformed"/>
@@ -62,7 +62,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="jbtnDiagnosa">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Diagnosa"/>
+        <Property name="text" type="java.lang.String" value="Diagnose"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnDiagnosaActionPerformed"/>
@@ -78,7 +78,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="jbtnBobotKriteria">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Bobot Kriteria"/>
+        <Property name="text" type="java.lang.String" value="Criteria Weights"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnBobotKriteriaActionPerformed"/>

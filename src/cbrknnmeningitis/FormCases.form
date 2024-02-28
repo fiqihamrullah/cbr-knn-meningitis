@@ -29,7 +29,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Entri Kasus"/>
+            <TitledBorder title="Case Entry"/>
           </Border>
         </Property>
       </Properties>
@@ -57,8 +57,8 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
-                <StringItem index="0" value="Ya"/>
-                <StringItem index="1" value="Tidak"/>
+                <StringItem index="0" value="Yes"/>
+                <StringItem index="1" value="No"/>
               </StringArray>
             </Property>
           </Properties>
@@ -129,11 +129,11 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Atribut Meningitis"/>
+            <Property name="text" type="java.lang.String" value="Meningitis Attributes"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="310" y="60" width="-1" height="-1"/>
+              <AbsoluteConstraints x="280" y="60" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -171,7 +171,7 @@
     </Container>
     <Component class="javax.swing.JButton" name="jbtnTutup">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tutup"/>
+        <Property name="text" type="java.lang.String" value="Close"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnTutupActionPerformed"/>
@@ -190,17 +190,17 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="33" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="PENGOLAHAN DATA KASUS"/>
+        <Property name="text" type="java.lang.String" value="Case Processing"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="10" width="-1" height="-1"/>
+          <AbsoluteConstraints x="20" y="10" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jbtnHapus">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Hapus"/>
+        <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnHapusActionPerformed"/>
@@ -213,7 +213,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="jbtnSimpan">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Simpan"/>
+        <Property name="text" type="java.lang.String" value="Save"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtnSimpanActionPerformed"/>
@@ -226,7 +226,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="jtbnBersihkan">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Bersihkan"/>
+        <Property name="text" type="java.lang.String" value="Clear"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtbnBersihkanActionPerformed"/>

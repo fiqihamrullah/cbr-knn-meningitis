@@ -19,7 +19,7 @@ public class FormMain extends javax.swing.JFrame {
     {
         initComponents();
         setResizable(false);
-        setTitle("Menu Utama");
+        setTitle("Main Menu");
         Util.TengahWindow(this);
     }
 
@@ -39,14 +39,14 @@ public class FormMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jbtnKelolaKB.setText("Kelola KB");
+        jbtnKelolaKB.setText("Manage KB");
         jbtnKelolaKB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnKelolaKBActionPerformed(evt);
             }
         });
 
-        jbtnDiagnosa.setText("Diagnosa");
+        jbtnDiagnosa.setText("Diagnose");
         jbtnDiagnosa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnDiagnosaActionPerformed(evt);
@@ -60,7 +60,7 @@ public class FormMain extends javax.swing.JFrame {
             }
         });
 
-        jbtnBobotKriteria.setText("Bobot Kriteria");
+        jbtnBobotKriteria.setText("Criteria Weights");
         jbtnBobotKriteria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnBobotKriteriaActionPerformed(evt);
@@ -84,12 +84,12 @@ public class FormMain extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jbtnKelolaKB, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnKelolaKB, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jbtnBobotKriteria, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                .addComponent(jbtnBobotKriteria, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jbtnDiagnosa, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(jbtnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );

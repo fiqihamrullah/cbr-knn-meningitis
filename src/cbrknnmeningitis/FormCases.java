@@ -86,13 +86,13 @@ public class FormCases extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Entri Kasus"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Case Entry"));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Meningitis");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
-        jcmbStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak" }));
+        jcmbStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Yes", "No" }));
         jcmbStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcmbStatusActionPerformed(evt);
@@ -120,8 +120,8 @@ public class FormCases extends javax.swing.JFrame
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 380, 360));
 
-        jLabel5.setText("Atribut Meningitis");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
+        jLabel5.setText("Meningitis Attributes");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 419, 460));
 
@@ -146,7 +146,7 @@ public class FormCases extends javax.swing.JFrame
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 121, 620, 390));
 
-        jbtnTutup.setText("Tutup");
+        jbtnTutup.setText("Close");
         jbtnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnTutupActionPerformed(evt);
@@ -154,12 +154,12 @@ public class FormCases extends javax.swing.JFrame
         });
         getContentPane().add(jbtnTutup, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 60, 140, 50));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 204));
-        jLabel1.setText("PENGOLAHAN DATA KASUS");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jLabel1.setText("Case Processing");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        jbtnHapus.setText("Hapus");
+        jbtnHapus.setText("Delete");
         jbtnHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnHapusActionPerformed(evt);
@@ -167,7 +167,7 @@ public class FormCases extends javax.swing.JFrame
         });
         getContentPane().add(jbtnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, 130, 50));
 
-        jbtnSimpan.setText("Simpan");
+        jbtnSimpan.setText("Save");
         jbtnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSimpanActionPerformed(evt);
@@ -175,7 +175,7 @@ public class FormCases extends javax.swing.JFrame
         });
         getContentPane().add(jbtnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 520, 170, 50));
 
-        jtbnBersihkan.setText("Bersihkan");
+        jtbnBersihkan.setText("Clear");
         jtbnBersihkan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtbnBersihkanActionPerformed(evt);

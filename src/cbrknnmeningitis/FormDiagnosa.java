@@ -57,13 +57,14 @@ public class FormDiagnosa extends javax.swing.JFrame
         jbtnSimpan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Diagnosa Meningitis");
+        setTitle("Meningitis Diagnose");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 204));
-        jLabel1.setText("DIAGNOSA KASUS");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Case Diagnose");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Entri Kasus Baru dengan Benar"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtblatributmeningitis.setModel(new javax.swing.table.DefaultTableModel(
@@ -101,7 +102,7 @@ public class FormDiagnosa extends javax.swing.JFrame
 
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 18));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Kemiripan");
+        jLabel3.setText("Similarity");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 100, -1));
 
         jlblResult.setFont(new java.awt.Font("Dialog", 0, 36));
@@ -111,14 +112,14 @@ public class FormDiagnosa extends javax.swing.JFrame
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 380, 140));
 
-        jbtnTutup.setText("Tutup");
+        jbtnTutup.setText("Close");
         jbtnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnTutupActionPerformed(evt);
             }
         });
 
-        jbtnSimpan.setText("Diagnosa");
+        jbtnSimpan.setText("Diagnose");
         jbtnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSimpanActionPerformed(evt);
@@ -142,7 +143,7 @@ public class FormDiagnosa extends javax.swing.JFrame
                                 .addComponent(jbtnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(109, 109, 109)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -181,13 +182,13 @@ private void jbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
      jlblKemiripan.setText(String.format("%.2f", mdresult.getSim()  *100) + " %");
      if (mdresult.getTypeofMeningitis().equals("1"))
      {
-       jlblResult.setText("Ya");    
+       jlblResult.setText("Yes");    
      }else{
-       jlblResult.setText("Tidak");      
+       jlblResult.setText("No");      
      }
      
      
-     JOptionPane.showMessageDialog(this, "Diagnosa Berhasil dilakukan!!","Sukses",JOptionPane.INFORMATION_MESSAGE);
+     JOptionPane.showMessageDialog(this, "Diagnosis successfully performed!!","Success",JOptionPane.INFORMATION_MESSAGE);
     
 }//GEN-LAST:event_jbtnSimpanActionPerformed
 

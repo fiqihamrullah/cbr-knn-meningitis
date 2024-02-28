@@ -26,7 +26,7 @@ public class FormBobot extends javax.swing.JFrame
         initComponents(); 
         Util.TengahWindow(this);
         setResizable(false);        
-        setTitle("Pengolahan Data Bobot");       
+        setTitle("Weights Data Processing");       
         loadDataWeights();
         
     }
@@ -66,10 +66,11 @@ public class FormBobot extends javax.swing.JFrame
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 204));
-        jLabel1.setText("PENGOLAHAN DATA BOBOT");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("WEIGHT DATA");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 420, -1));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Entri Bobot"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Weight Entry"));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtblatributmeningitis.setModel(new javax.swing.table.DefaultTableModel(
@@ -90,25 +91,25 @@ public class FormBobot extends javax.swing.JFrame
         });
         jScrollPane2.setViewportView(jtblatributmeningitis);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 380, 410));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 400, 430));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 53, 419, 460));
 
-        jbtnTutup.setText("Tutup");
+        jbtnTutup.setText("Close");
         jbtnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnTutupActionPerformed(evt);
             }
         });
-        getContentPane().add(jbtnTutup, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 519, 150, 50));
+        getContentPane().add(jbtnTutup, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 519, 170, 50));
 
-        jbtnSimpan.setText("Simpan");
+        jbtnSimpan.setText("Save");
         jbtnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSimpanActionPerformed(evt);
             }
         });
-        getContentPane().add(jbtnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 519, 170, 50));
+        getContentPane().add(jbtnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 519, 180, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
