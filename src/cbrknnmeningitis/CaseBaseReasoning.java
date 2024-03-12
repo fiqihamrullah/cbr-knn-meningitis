@@ -48,7 +48,7 @@ public class CaseBaseReasoning
         {
             double sim=Distance.euclideanDistance(datameningitis.getData(i), newcases,totalweight);
           //  sim = sim/totalweight;
-          //  System.out.println(totalweight);
+           // System.out.println(sim);
             datameningitis.getData(i).setSimilarity(sim);
         }
         
