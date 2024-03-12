@@ -63,7 +63,7 @@ public class CasesDBManager
                md.setTypeofMeningitis(rs.getString("abm"));              
                
                sql = "select * from casedetail where id_case=" + md.getID() + " order by id_casedetail asc";
-               System.out.println(sql);
+              // System.out.println(sql);
                db = new Database();
                ResultSet rsx = db.ExecuteQuery(sql);
                while(rsx.next())

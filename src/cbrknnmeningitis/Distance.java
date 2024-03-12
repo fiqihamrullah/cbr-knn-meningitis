@@ -17,7 +17,7 @@ public class Distance
         
         for(int i=0;i<mDataCases.getAttributeCount();i++)
         {
-           d+= (Math.pow((mDataCases.getAttribute(i).getWeight().getW() *(mDataCases.getValues(i)  - mNewDataCases.getValues(i))),2));
+           d+= mDataCases.getAttribute(i).getWeight().getW() * Math.pow(mDataCases.getValues(i)  - mNewDataCases.getValues(i),2);
         }
         return Math.sqrt(d/bobot);
     }

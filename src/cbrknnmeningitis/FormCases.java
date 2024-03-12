@@ -37,7 +37,7 @@ public class FormCases extends javax.swing.JFrame
         initComponents();
         Util.TengahWindow(this);
         setResizable(false);        
-        setTitle("Pengolahan Data Kasus");
+        setTitle("Cases Data Processing");
         initTable();
         loadDataCases();
     }

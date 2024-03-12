@@ -53,8 +53,10 @@ public class FormDiagnosa extends javax.swing.JFrame
         jlblKemiripan = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jlblResult = new javax.swing.JLabel();
-        jbtnTutup = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jbtnSimpan = new javax.swing.JButton();
+        jbtnTutup = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Meningitis Diagnose");
@@ -85,7 +87,7 @@ public class FormDiagnosa extends javax.swing.JFrame
         });
         jScrollPane2.setViewportView(jtblatributmeningitis);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 380, 240));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 380, 230));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -98,19 +100,34 @@ public class FormDiagnosa extends javax.swing.JFrame
         jlblKemiripan.setFont(new java.awt.Font("Dialog", 1, 24));
         jlblKemiripan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlblKemiripan.setText("0");
-        jPanel2.add(jlblKemiripan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 140, 80));
+        jPanel2.add(jlblKemiripan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 130, 60));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 18));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Similarity");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 100, -1));
+        jLabel3.setText("Similarity Distance");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, -1));
 
         jlblResult.setFont(new java.awt.Font("Dialog", 0, 36));
         jlblResult.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlblResult.setText("?");
-        jPanel2.add(jlblResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 100, 80));
+        jPanel2.add(jlblResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 100, 60));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 380, 140));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 380, 110));
+
+        jLabel4.setText("K-NN");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextField1.setText("4");
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 60, -1));
+
+        jbtnSimpan.setText("Diagnose");
+        jbtnSimpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnSimpanActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbtnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 170, 40));
 
         jbtnTutup.setText("Close");
         jbtnTutup.addActionListener(new java.awt.event.ActionListener() {
@@ -119,31 +136,19 @@ public class FormDiagnosa extends javax.swing.JFrame
             }
         });
 
-        jbtnSimpan.setText("Diagnose");
-        jbtnSimpan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnSimpanActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jbtnTutup, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(jbtnTutup, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbtnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -154,9 +159,7 @@ public class FormDiagnosa extends javax.swing.JFrame
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtnTutup, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbtnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jbtnTutup, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -179,7 +182,8 @@ private void jbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
      }     
      CaseBaseReasoning cbreasoning = new CaseBaseReasoning(mdata);     
      MeningitisData mdresult = cbreasoning.caseRetrieve();
-     jlblKemiripan.setText(String.format("%.2f", mdresult.getSim()  *100) + " %");
+    // System.out.println("Similarity : %.2f " +  mdresult.getSim());
+     jlblKemiripan.setText(String.format("%.2f", mdresult.getSim()));
      if (mdresult.getTypeofMeningitis().equals("1"))
      {
        jlblResult.setText("Yes");    
@@ -236,9 +240,11 @@ private void jbtnTutupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jbtnSimpan;
     private javax.swing.JButton jbtnTutup;
     private javax.swing.JLabel jlblKemiripan;
