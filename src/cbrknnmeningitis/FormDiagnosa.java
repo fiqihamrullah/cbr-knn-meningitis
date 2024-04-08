@@ -185,7 +185,7 @@ private void jbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
      MeningitisData mdresult = cbreasoning.caseRetrieve(k);
     // System.out.println("Similarity : %.2f " +  mdresult.getSim());
      jlblKemiripan.setText(String.format("%.2f", mdresult.getSim()));
-     if (mdresult.getTypeofMeningitis().equals("1"))
+     if (cbreasoning.getAnswer().equals("1"))
      {
        jlblResult.setText("Yes");    
      }else{

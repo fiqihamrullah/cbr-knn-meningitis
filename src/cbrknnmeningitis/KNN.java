@@ -25,7 +25,7 @@ public class KNN
     
     
     
-    public void classify(int k)
+    public String classify(int k)
     {
         Collections.sort(meningitisdata.getListMeningitisData());
         
@@ -36,6 +36,7 @@ public class KNN
         for(int i=0;i<k;i++)
         {
             String nama = meningitisdata.getData(i).getTypeofMeningitis();
+            System.out.println(nama + " Sim:" + meningitisdata.getData(i).getSim());
             if (map.containsKey(nama)) 
             {
                 int n = map.get(nama).intValue();
@@ -47,9 +48,13 @@ public class KNN
             
         }   
 
+        
         System.out.println("unsorted map: "+map);
         sorted_map.putAll(map);
-        System.out.println("results: "+sorted_map);
+        System.out.println("results: "+sorted_map); // sort from highest to lowest of counts
+       
+        String finalAnswer = sorted_map.firstKey(); //get the highest counts of NN
+        return finalAnswer;
     }
     
     
@@ -59,19 +64,19 @@ public class KNN
     
     class ValueComparator implements Comparator<String>
     {
-    Map<String, Integer> base;
-    public ValueComparator(Map<String, Integer> base) {
-        this.base = base;
-    }
+            Map<String, Integer> base;
+            public ValueComparator(Map<String, Integer> base) {
+                this.base = base;
+            }
 
-    
-        @Override
-    public int compare(String a, String b) {
-        if (base.get(a) <= base.get(b)) {
-            return -1;
-        } else {
-            return 1;
-        }  
+
+            @Override
+            public int compare(String a, String b) {
+                if (base.get(a) <= base.get(b)) {
+                    return  1;
+                } else {
+                    return -1;
+                }  
+            }
     }
-}
 }

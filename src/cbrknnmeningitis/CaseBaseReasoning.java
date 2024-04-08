@@ -18,6 +18,8 @@ public class CaseBaseReasoning
     private Meningitis datameningitis;
     
     private double totalweight;
+    
+    private String result;
 
     public CaseBaseReasoning(MeningitisData newcases) 
     {
@@ -53,8 +55,13 @@ public class CaseBaseReasoning
         }
         
         KNN knn = new KNN(datameningitis);      
-        knn.classify(k);        
+        result = knn.classify(k);        
         return knn.getBestMatch();
+    }
+    
+    public String getAnswer()
+    {
+        return result;
     }
     
     public void retain()
