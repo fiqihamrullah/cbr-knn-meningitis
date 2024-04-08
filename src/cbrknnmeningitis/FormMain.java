@@ -21,6 +21,7 @@ public class FormMain extends javax.swing.JFrame {
         setResizable(false);
         setTitle("Main Menu");
         Util.TengahWindow(this);
+        Util.initWindowTheme();
     }
 
     /** This method is called from within the constructor to

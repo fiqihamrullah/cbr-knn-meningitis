@@ -54,7 +54,7 @@ public class FormDiagnosa extends javax.swing.JFrame
         jLabel3 = new javax.swing.JLabel();
         jlblResult = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTxtKNN = new javax.swing.JTextField();
         jbtnSimpan = new javax.swing.JButton();
         jbtnTutup = new javax.swing.JButton();
 
@@ -117,9 +117,9 @@ public class FormDiagnosa extends javax.swing.JFrame
         jLabel4.setText("K-NN");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("4");
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 60, -1));
+        jTxtKNN.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTxtKNN.setText("8");
+        jPanel1.add(jTxtKNN, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 60, -1));
 
         jbtnSimpan.setText("Diagnose");
         jbtnSimpan.addActionListener(new java.awt.event.ActionListener() {
@@ -174,6 +174,7 @@ private void jtblatributmeningitisMouseClicked(java.awt.event.MouseEvent evt) {/
 private void jbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSimpanActionPerformed
 // TODO add your handling code here:
     // TODO add your handling code here:
+     int k = Integer.parseInt(jTxtKNN.getText());
      MeningitisData mdata = new MeningitisData(-1); 
      for(int i=0;i<jtblatributmeningitis.getRowCount();i++)
      {
@@ -181,7 +182,7 @@ private void jbtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
         mdata.addData(pa, Double.parseDouble(jtblatributmeningitis.getValueAt(i, 2).toString()));         
      }     
      CaseBaseReasoning cbreasoning = new CaseBaseReasoning(mdata);     
-     MeningitisData mdresult = cbreasoning.caseRetrieve();
+     MeningitisData mdresult = cbreasoning.caseRetrieve(k);
     // System.out.println("Similarity : %.2f " +  mdresult.getSim());
      jlblKemiripan.setText(String.format("%.2f", mdresult.getSim()));
      if (mdresult.getTypeofMeningitis().equals("1"))
@@ -244,7 +245,7 @@ private void jbtnTutupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTxtKNN;
     private javax.swing.JButton jbtnSimpan;
     private javax.swing.JButton jbtnTutup;
     private javax.swing.JLabel jlblKemiripan;

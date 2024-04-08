@@ -41,7 +41,7 @@ public class CaseBaseReasoning
         }
     }
     
-    public MeningitisData caseRetrieve()
+    public MeningitisData caseRetrieve(int k)
     {
         loadWeightsAndData();
         for(int i=0;i<datameningitis.getDataCount();i++)
@@ -52,8 +52,7 @@ public class CaseBaseReasoning
             datameningitis.getData(i).setSimilarity(sim);
         }
         
-        KNN knn = new KNN(datameningitis);
-        int k=4;
+        KNN knn = new KNN(datameningitis);      
         knn.classify(k);        
         return knn.getBestMatch();
     }
